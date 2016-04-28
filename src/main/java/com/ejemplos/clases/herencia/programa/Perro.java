@@ -1,4 +1,6 @@
-package com.ejemplos.clases.herencia;
+package com.ejemplos.clases.herencia.programa;
+
+import com.ejemplos.clases.herencia.Animal;
 
 /**
  * Created by pepesan on 28/04/2016.
@@ -10,6 +12,7 @@ public class Perro extends Animal {
     public Perro(){
         super();
         this.lealtad=10;
+        this.raza="Canis";
     }
     public Perro(String color, String raza,
                  Float peso,Float altura,

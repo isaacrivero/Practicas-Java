@@ -5,7 +5,7 @@ package com.ejemplos.clases.herencia;
  */
 public abstract class Animal {
     public String color;
-    public String raza;
+    protected String raza;
     public Float peso;
     public Float altura;
     public String nombre;
