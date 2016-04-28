@@ -35,8 +35,8 @@ public class Cadenas {
 		System.out.println(String.valueOf(s));
 		System.out.println(s.toUpperCase());
 		System.out.println(s.toLowerCase());
-		String dias="Lunes,Martes,Mi�rcoles,Jueves," +
-				"Viernes,S�bado,Domingo";
+		String dias="Lunes,Martes,Miércoles,Jueves," +
+				"Viernes,Sábado,Domingo";
 		String [] adias=dias.split(",");
 		for(String dia:adias){
 			System.out.println(dia);

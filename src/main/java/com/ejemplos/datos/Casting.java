@@ -17,6 +17,21 @@ public class Casting {
 		float f;
 		f=i;
 		System.out.println(f);
+		try {
+			int x = Integer.parseInt("9");
+			double d = Double.parseDouble("5");
+			//transforma a entero desde hexadecimal
+			int b = Integer.parseInt("444", 16);
+			f = Float.parseFloat("3.2");
+			System.out.println(x);
+			System.out.println(d);
+			System.out.println(b);
+			System.out.println(f);
+		}
+		catch (Exception e){
+			System.out.println(e.getMessage());
+		}
+
 	}
 
 }

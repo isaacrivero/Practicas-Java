@@ -2,12 +2,12 @@ package com.ejemplos.clases;
 
 public class Estatica {
 
-	static int version = 10;
-    int numeroDeCapitulos;
-    static void anadeUnCapitulo() {
+	public static int version = 10;
+    public int numeroDeCapitulos;
+    public static void anadeUnCapitulo() {
         //numeroDeCapitulos++;        // esto no funciona
         }
-    static void modifica_version( int i ) {
+    public static void modifica_version( int i ) {
         version+=i;                    // esto si funciona
         }
     /**
