@@ -1,6 +1,4 @@
-package com.ejemplos.clases;
-
-import com.ejemplos.clases.Clase;
+package com.ejemplos.clases.herencia;
 
 public class SuperClase extends Clase {
 	

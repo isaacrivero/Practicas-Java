@@ -1,4 +1,4 @@
-package com.ejemplos.clases;
+package com.ejemplos.clases.herencia;
 
 public class Clase {
 	public int i;
