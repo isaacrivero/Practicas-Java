@@ -5,7 +5,7 @@ package com.ejemplos.clases.herencia;
  */
 public class Perro extends Animal {
 
-    public Integer lealtad;
+    private Integer lealtad;
 
     public Perro(){
         super();
@@ -23,6 +23,15 @@ public class Perro extends Animal {
         super(color,raza,peso,altura,nombre);
         this.lealtad=lealtad;
     }
+
+    public Integer getLealtad() {
+        return lealtad;
+    }
+
+    public void setLealtad(Integer lealtad) {
+        this.lealtad = lealtad;
+    }
+
     public void ruido(){
         ladrar();
     }

@@ -11,7 +11,8 @@ public class ProgramaAnimal {
         fluky.raza="Pastor Alemán";
         fluky.ladrar();
         fluky.ruido();
-
+        fluky.setLealtad(15);
+        System.out.println(fluky.getLealtad());
         Perro toby=new Perro("negro","Collie"
                 ,35.0f,0.60f,"Toby",16);
     }
