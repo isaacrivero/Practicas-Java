@@ -20,27 +20,41 @@ public class Colecciones {
 		//construir el listado
 		List<Cliente> clientes = new ArrayList<Cliente>();
 		//construir el objeto cliente
-		Cliente pepe=new Cliente();
+		Cliente pepe;
+		pepe=new Cliente();
 		pepe.setDni("8997894478A");
 		pepe.setNombre("Pepe");
 		//construir el objeto direccion
 		Direccion dir=new Direccion();
 		dir.setCalle("Arribarriaga");
 		dir.setNumero("14");
-		//Asociar el objeto dirección al objeto cliente
-		pepe.setDireccion(dir);
+		//construir el objeto del listado
+		List<Direccion> direcciones=new ArrayList<Direccion>();
+		//incluir la dirección en el listado de direcciones
+		direcciones.add(dir);
+		//Asociar el objeto de las direcciones al objeto cliente
+		pepe.setDirecciones(direcciones);
 		//introducir en el listado el objeto cliente
 		clientes.add(pepe);
 		pepe.setNombre("Jose");
-		pepe.getDireccion().setCalle("Otra Calle");
+		pepe.getDirecciones().get(0).setCalle("Otra Calle");
 
 		Cliente cogido=clientes.get(0);
 		System.out.println(cogido.getNombre());
-		Direccion dirCogida=cogido.getDireccion();
-		System.out.println(dirCogida.getCalle());
+		List<Direccion> direccionesCogidas=cogido.getDirecciones();
+		System.out.println(direccionesCogidas.get(0).getCalle());
 		//del listado coges un objeto Cliente, del cliente coges la dirección
 		//de la dirección coger el número
-		clientes.get(0).getDireccion().getNumero();
+		clientes.get(0).getDirecciones().get(0).getNumero();
+
+
+
+
+		List<Cliente> listadoclientes=new ArrayList<Cliente>();
+		List<List<Cliente>> listadoDeListados=new ArrayList<List<Cliente>>();
+		listadoDeListados.add(listadoclientes);
+		listadoclientes.add(pepe);
+		Cliente clientePepe=listadoDeListados.get(0).get(0);
 /*
 
 

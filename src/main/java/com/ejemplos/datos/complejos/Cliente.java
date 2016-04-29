@@ -1,6 +1,8 @@
 package com.ejemplos.datos.complejos;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by pepesan on 29/04/2016.
@@ -9,22 +11,22 @@ public class Cliente implements Serializable{
 
     private String nombre;
     private String dni;
-    private Direccion direccion;
+    private List<Direccion> direcciones;
 
     public Cliente() {
         this.nombre = "";
         this.dni = "";
-        this.direccion=new Direccion();
+        this.direcciones=new ArrayList<Direccion>();
     }
     public Cliente(String nombre, String dni) {
         this.nombre = nombre;
         this.dni = dni;
-        this.direccion=new Direccion();
+        this.direcciones=new ArrayList<Direccion>();
     }
-    public Cliente(String nombre, String dni, Direccion direccion) {
+    public Cliente(String nombre, String dni, List<Direccion> direcciones) {
         this.nombre = nombre;
         this.dni = dni;
-        this.direccion=direccion;
+        this.direcciones=direcciones;
     }
 
     public String getNombre() {
@@ -43,11 +45,11 @@ public class Cliente implements Serializable{
         this.dni = dni;
     }
 
-    public Direccion getDireccion() {
-        return direccion;
+    public List<Direccion> getDirecciones() {
+        return direcciones;
     }
 
-    public void setDireccion(Direccion direccion) {
-        this.direccion = direccion;
+    public void setDirecciones(List<Direccion> direcciones) {
+        this.direcciones = direcciones;
     }
 }
