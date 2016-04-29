@@ -9,10 +9,43 @@ public class Colecciones {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		List listado=new ArrayList<String>();
+		List<String> listado=new LinkedList<String>();
 		listado.add("Uno");
 		listado.add("Dos");
 		listado.add("Tres");
+		for(int i=0;i<listado.size();i++){
+			String cadena=listado.get(i);
+			System.out.println(cadena);
+		}
+		//construir el listado
+		List<Cliente> clientes = new ArrayList<Cliente>();
+		//construir el objeto cliente
+		Cliente pepe=new Cliente();
+		pepe.setDni("8997894478A");
+		pepe.setNombre("Pepe");
+		//construir el objeto direccion
+		Direccion dir=new Direccion();
+		dir.setCalle("Arribarriaga");
+		dir.setNumero("14");
+		//Asociar el objeto dirección al objeto cliente
+		pepe.setDireccion(dir);
+		//introducir en el listado el objeto cliente
+		clientes.add(pepe);
+		pepe.setNombre("Jose");
+		pepe.getDireccion().setCalle("Otra Calle");
+
+		Cliente cogido=clientes.get(0);
+		System.out.println(cogido.getNombre());
+		Direccion dirCogida=cogido.getDireccion();
+		System.out.println(dirCogida.getCalle());
+		//del listado coges un objeto Cliente, del cliente coges la dirección
+		//de la dirección coger el número
+		clientes.get(0).getDireccion().getNumero();
+/*
+
+
+
+
 		int count[] = {34, 22,10,60,30,22};
 		Set<Integer> set = new HashSet<Integer>();
 		try{
@@ -79,6 +112,7 @@ public class Colecciones {
 		tm.put("Zara", new Double(balance + 1000));
 		System.out.println("Zara's new balance: " +
 				tm.get("Zara"));
+*/
 }
 
 }
