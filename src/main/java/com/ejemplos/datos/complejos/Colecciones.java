@@ -5,56 +5,42 @@ import java.util.*;
 public class Colecciones {
 
 	/**
-	 * @param args
+	 * @param listado
 	 */
+	public static void imprimeListado(List<String> listado){
+		for(int i=0;i<listado.size();i++){
+			String cadena=listado.get(i);
+			System.out.println(cadena);
+		}
+	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		List<String> listado=new LinkedList<String>();
 		listado.add("Uno");
 		listado.add("Dos");
 		listado.add("Tres");
-		for(int i=0;i<listado.size();i++){
-			String cadena=listado.get(i);
-			System.out.println(cadena);
+		imprimeListado(listado);
+		listado.remove(2);
+		imprimeListado(listado);
+		listado.remove("Dos");
+		imprimeListado(listado);
+		listado.set(0,"modificado");
+		imprimeListado(listado);
+		listado.remove(0);
+		imprimeListado(listado);
+		if(listado.isEmpty()){
+			System.out.println("Listado Vacio");
 		}
-		//construir el listado
-		List<Cliente> clientes = new ArrayList<Cliente>();
-		//construir el objeto cliente
-		Cliente pepe;
-		pepe=new Cliente();
-		pepe.setDni("8997894478A");
-		pepe.setNombre("Pepe");
-		//construir el objeto direccion
-		Direccion dir=new Direccion();
-		dir.setCalle("Arribarriaga");
-		dir.setNumero("14");
-		//construir el objeto del listado
-		List<Direccion> direcciones=new ArrayList<Direccion>();
-		//incluir la dirección en el listado de direcciones
-		direcciones.add(dir);
-		//Asociar el objeto de las direcciones al objeto cliente
-		pepe.setDirecciones(direcciones);
-		//introducir en el listado el objeto cliente
-		clientes.add(pepe);
-		pepe.setNombre("Jose");
-		pepe.getDirecciones().get(0).setCalle("Otra Calle");
+		listado.add("Uno");
+		if(listado.contains("uno")){
+			System.out.println("Contiene el objeto");
+		}else{
+			System.out.println("No contiene el objeto");
+		}
 
-		Cliente cogido=clientes.get(0);
-		System.out.println(cogido.getNombre());
-		List<Direccion> direccionesCogidas=cogido.getDirecciones();
-		System.out.println(direccionesCogidas.get(0).getCalle());
-		//del listado coges un objeto Cliente, del cliente coges la dirección
-		//de la dirección coger el número
-		clientes.get(0).getDirecciones().get(0).getNumero();
-
-
-
-
-		List<Cliente> listadoclientes=new ArrayList<Cliente>();
-		List<List<Cliente>> listadoDeListados=new ArrayList<List<Cliente>>();
-		listadoDeListados.add(listadoclientes);
-		listadoclientes.add(pepe);
-		Cliente clientePepe=listadoDeListados.get(0).get(0);
+		for(String a:listado){
+			System.out.println("Cadena: "+a);
+		}
 /*
 
 
@@ -127,6 +113,50 @@ public class Colecciones {
 		System.out.println("Zara's new balance: " +
 				tm.get("Zara"));
 */
+		//construir el listado
+		List<Cliente> clientes = new ArrayList<Cliente>();
+		//construir el objeto cliente
+		Cliente pepe;
+		pepe=new Cliente();
+		pepe.setDni("8997894478A");
+		pepe.setNombre("Pepe");
+		//construir el objeto direccion
+		Direccion dir=new Direccion();
+		dir.setCalle("Arribarriaga");
+		dir.setNumero("14");
+		//construir el objeto del listado
+		List<Direccion> direcciones=new ArrayList<Direccion>();
+		//incluir la dirección en el listado de direcciones
+		direcciones.add(dir);
+		//Asociar el objeto de las direcciones al objeto cliente
+		pepe.setDirecciones(direcciones);
+		//introducir en el listado el objeto cliente
+		clientes.add(pepe);
+		pepe.setNombre("Jose");
+		pepe.getDirecciones().get(0).setCalle("Otra Calle");
+
+		Cliente cogido=clientes.get(0);
+		System.out.println(cogido.getNombre());
+		List<Direccion> direccionesCogidas=cogido.getDirecciones();
+		System.out.println(direccionesCogidas.get(0).getCalle());
+		//del listado coges un objeto Cliente, del cliente coges la dirección
+		//de la dirección coger el número
+		clientes.get(0).getDirecciones().get(0).getNumero();
+		for(Cliente c:clientes){
+			for(Direccion direccion:c.getDirecciones()){
+				if(direccion.getNumero().equals("14")){
+					//coincidencia
+				}
+			}
+		}
+
+
+
+		List<Cliente> listadoclientes=new ArrayList<Cliente>();
+		List<List<Cliente>> listadoDeListados=new ArrayList<List<Cliente>>();
+		listadoDeListados.add(listadoclientes);
+		listadoclientes.add(pepe);
+		Cliente clientePepe=listadoDeListados.get(0).get(0);
 }
 
 }

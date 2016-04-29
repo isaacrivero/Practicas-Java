@@ -52,4 +52,25 @@ public class Cliente implements Serializable{
     public void setDirecciones(List<Direccion> direcciones) {
         this.direcciones = direcciones;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Cliente cliente = (Cliente) o;
+
+        if (getNombre() != null ? !getNombre().equals(cliente.getNombre()) : cliente.getNombre() != null) return false;
+        if (getDni() != null ? !getDni().equals(cliente.getDni()) : cliente.getDni() != null) return false;
+        return getDirecciones() != null ? getDirecciones().equals(cliente.getDirecciones()) : cliente.getDirecciones() == null;
+
+    }
+
+    @Override
+    public int hashCode() {
+        int result = getNombre() != null ? getNombre().hashCode() : 0;
+        result = 31 * result + (getDni() != null ? getDni().hashCode() : 0);
+        result = 31 * result + (getDirecciones() != null ? getDirecciones().hashCode() : 0);
+        return result;
+    }
 }
