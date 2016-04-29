@@ -31,6 +31,11 @@ public class Arrays {
 		int[] array_int = new int [100] ;
 		int i;
 		for (i=0;i<100;i++){
+			array_int[i]=0;
+			System.out.println(array_int[i]);
+		}
+
+		for (i=0;i<100;i++){
 			array_int[i]=i;
 			System.out.println(array_int[i]);
 		}
@@ -52,8 +57,8 @@ public class Arrays {
 				i++;
 			}
 		}
-		for (int[] ele: doblearray){
-			for (int celda: ele){
+		for (int[] fila: doblearray){
+			for (int celda: fila){
 				System.out.println(celda);
 			}
 		}
