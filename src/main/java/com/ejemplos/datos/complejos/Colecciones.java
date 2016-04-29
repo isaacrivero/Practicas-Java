@@ -41,7 +41,7 @@ public class Colecciones {
 		for(String a:listado){
 			System.out.println("Cadena: "+a);
 		}
-/*
+
 
 
 
@@ -64,6 +64,21 @@ public class Colecciones {
 					(Integer)sortedSet.last());
 		}
 		catch(Exception e){}
+
+
+		Direccion direcciones[]={
+				new Direccion("calle1","12"),
+				new Direccion("calle2","14"),
+				new Direccion("calle1","12")
+		};
+		Set<Direccion> conjuntoDirecciones=new HashSet<Direccion>();
+		conjuntoDirecciones.add(direcciones[0]);
+		conjuntoDirecciones.add(direcciones[1]);
+		conjuntoDirecciones.add(direcciones[2]);
+		for(Direccion d:conjuntoDirecciones){
+			System.out.println(d);
+		}
+
 		// Create the sorted set
 		SortedSet set2 = new TreeSet();
 
@@ -79,14 +94,35 @@ public class Colecciones {
 			Object element = it.next();
 			System.out.println(element.toString());
 		}
+		Map mapa=new HashMap<Integer,String>();
+		mapa.put(0,"Valor14");
+		mapa.put(1,"Valor16");
+		mapa.put(2,"Valor11");
+		mapa.put(3,"Valor10");
+		mapa=new HashMap<String,String>();
+		mapa.put("nombre","Pepe");
+		mapa.put("dni","789654A");
+		mapa=new HashMap<String,Cliente>();
+		mapa.put("Cod1234",new Cliente());
+		Cliente client=(Cliente) mapa.get("Cod1234");
+
+
+
+		mapa=new HashMap<String,HashMap<String,Cliente>>();
+
+
+
+		//Map m1 = new HashMap<Object,Object>();
 		Map m1 = new HashMap();
 		m1.put("Zara", "8");
 		m1.put("Mahnaz", "31");
 		m1.put("Ayan", "12");
 		m1.put("Daisy", "14");
+		m1.put("Daisy2", "14");
 		System.out.println();
 		System.out.println(" Map Elements");
 		System.out.print("\t" + m1);
+
 		// Create a hash map
 		TreeMap tm = new TreeMap();
 		// Put elements to the map
@@ -112,7 +148,24 @@ public class Colecciones {
 		tm.put("Zara", new Double(balance + 1000));
 		System.out.println("Zara's new balance: " +
 				tm.get("Zara"));
-*/
+
+
+		Map mimapa=new HashMap<String,Object>();
+		Map valor=new HashMap<String,Object>();
+		Map cliente1= new HashMap<String,Object>();
+		cliente1.put("firstName","Jhon");
+		cliente1.put("lastName","Doe");
+		valor.put(0,cliente1);
+		cliente1= new HashMap<String,Object>();
+		cliente1.put("firstName","Anna");
+		cliente1.put("lastName","Smith");
+		cliente1.put("direccion","c/ lope de vega 14");
+		valor.put(1,cliente1);
+		mimapa.put("Empleados",valor);
+		System.out.println(mimapa);
+
+		/*
+
 		//construir el listado
 		List<Cliente> clientes = new ArrayList<Cliente>();
 		//construir el objeto cliente
@@ -157,6 +210,7 @@ public class Colecciones {
 		listadoDeListados.add(listadoclientes);
 		listadoclientes.add(pepe);
 		Cliente clientePepe=listadoDeListados.get(0).get(0);
+		*/
 }
 
 }

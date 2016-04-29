@@ -41,8 +41,10 @@ public class Direccion {
 
         Direccion direccion = (Direccion) o;
 
-        if (getCalle() != null ? !getCalle().equals(direccion.getCalle()) : direccion.getCalle() != null) return false;
-        return getNumero() != null ? getNumero().equals(direccion.getNumero()) : direccion.getNumero() == null;
+        if (getCalle() != null ? !getCalle().equals(direccion.getCalle()) :
+                direccion.getCalle() != null) return false;
+        return getNumero() != null ? getNumero().equals(direccion.getNumero()) :
+                direccion.getNumero() == null;
 
     }
 
@@ -51,5 +53,13 @@ public class Direccion {
         int result = getCalle() != null ? getCalle().hashCode() : 0;
         result = 31 * result + (getNumero() != null ? getNumero().hashCode() : 0);
         return result;
+    }
+
+    @Override
+    public String toString() {
+        return "Direccion{" +
+                "calle='" + calle + '\'' +
+                ", numero='" + numero + '\'' +
+                '}';
     }
 }
