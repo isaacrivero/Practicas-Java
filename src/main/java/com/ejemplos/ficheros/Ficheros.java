@@ -15,18 +15,21 @@ public class Ficheros {
 	      BufferedReader br = null;
 		try{
 			File file = new File("./md5sum.txt");
-			if(file.createNewFile())
+			if(file.createNewFile()) {
 				System.out.println("Success!");
-			else
+			}
+			else{
 				System.out.println
 						("Error, file already exists.");
+			}
 		}
 		catch(IOException ioe) {
 			ioe.printStackTrace();
 			System.out.println(ioe.getMessage());
 		}
+		BufferedWriter out=null;
 		try {
-			BufferedWriter out = new
+			out = new
 					BufferedWriter(new FileWriter("./md5sum.txt"));
 			out.write("aString");
 			out.close();
@@ -34,8 +37,13 @@ public class Ficheros {
 					("File created successfully");
 		}
 		catch (IOException e) {
+			System.out.println("Fallo al escribir el fichero");
+			System.out.println(e.getMessage());
 		}
-	      try {
+		finally {
+
+		}
+		  try {
 	         // Apertura del fichero y creacion de BufferedReader para poder
 	         // hacer una lectura comoda (disponer del metodo readLine()).
 	         archivo = new File ("./md5sum.txt");
@@ -44,8 +52,9 @@ public class Ficheros {
 
 	         // Lectura del fichero
 	         String linea;
-	         while((linea=br.readLine())!=null)
-	            System.out.println(linea);
+	         while((linea=br.readLine())!=null) {
+				 System.out.println(linea);
+			 }
 	      }
 	      catch(Exception e){
 	         e.printStackTrace();
@@ -75,7 +84,7 @@ public class Ficheros {
 	      PrintWriter pw = null;
 	      try
 	      {
-	          fichero = new FileWriter("c:\\Users\\pepesan\\prueba.txt");
+	          fichero = new FileWriter("./md5sum.txt");
 	          pw = new PrintWriter(fichero);
 	          for (int i = 0; i < 10; i++){
 	        	  
