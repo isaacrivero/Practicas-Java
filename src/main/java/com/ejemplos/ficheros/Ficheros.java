@@ -1,12 +1,6 @@
 package com.ejemplos.ficheros;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
+import java.io.*;
 import java.util.Scanner;
 
 public class Ficheros {
@@ -19,11 +13,32 @@ public class Ficheros {
 		 File archivo = null;
 	      FileReader fr = null;
 	      BufferedReader br = null;
-
+		try{
+			File file = new File("./md5sum.txt");
+			if(file.createNewFile())
+				System.out.println("Success!");
+			else
+				System.out.println
+						("Error, file already exists.");
+		}
+		catch(IOException ioe) {
+			ioe.printStackTrace();
+			System.out.println(ioe.getMessage());
+		}
+		try {
+			BufferedWriter out = new
+					BufferedWriter(new FileWriter("./md5sum.txt"));
+			out.write("aString");
+			out.close();
+			System.out.println
+					("File created successfully");
+		}
+		catch (IOException e) {
+		}
 	      try {
 	         // Apertura del fichero y creacion de BufferedReader para poder
 	         // hacer una lectura comoda (disponer del metodo readLine()).
-	         archivo = new File ("C:\\md5sum.txt");
+	         archivo = new File ("./md5sum.txt");
 	         fr = new FileReader (archivo);
 	         br = new BufferedReader(fr);
 
@@ -46,7 +61,7 @@ public class Ficheros {
 	            e2.printStackTrace();
          }
 	  }
-	      File file = new File ("c:\\Users\\pepesan\\","prueba.txt");
+	      File file = new File ("./md5sum.txt");
 	      try {
 	    	  // A partir del objeto File creamos el fichero f�sicamente
 	    	  if (file.createNewFile())
@@ -80,7 +95,7 @@ public class Ficheros {
 	            e2.printStackTrace();
 	         }
 	      }
-	      File ficherin=new File("C:\\Users\\pepesan\\prueba.txt");
+	      File ficherin=new File("./md5sum.txt");
 	      try {
 			Scanner f=new Scanner(ficherin);
 			f.useDelimiter("\n");
