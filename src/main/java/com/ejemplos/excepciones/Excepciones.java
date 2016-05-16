@@ -11,11 +11,15 @@ public class Excepciones {
 		int valor;
 		int x;
 		try {
+			Integer i=null;
+			i.toString();
 		    for( x=0,valor = 100; x < 100; x ++ )
 		        valor /= x;
 		    }
 		catch( ArithmeticException e ) {
-		    System.out.println( "Matem�ticas locas!" );
+		    System.out.println( "Matemáticas locas!" );
+			System.out.println(e.getStackTrace());
+			System.out.println(e.getMessage());
 		    }
 		catch( Exception e ) {
 		    System.out.println( "Se ha producido un error" );
@@ -40,6 +44,7 @@ public class Excepciones {
 		    } finally{
 		        System.out.println( "En la clausula finally" );
 		    }
+
 		    
 	}
 }
