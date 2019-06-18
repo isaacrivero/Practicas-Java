@@ -104,14 +104,19 @@ public class EstructurasDeControl {
 						"No coincide con los cases");
 				break;
 		}
-		/* Java 12
+		// Java 12
 		switch (cadena){
 			case "Valor2","Valor" -> {System.out.println("vale 'Valor'");}
 			case "Sin Valor" -> {System.out.println("Sin Valor");}
 			default-> {System.out.println("Otro Valor");}
 		}
+		var resultado= switch (cadena){
+            case "Valor2","Valor" -> "Valor 1";
+            case "Sin Valor" -> "Sin Valor";
+            default-> "Otro Valor";
+        };
 
-		 */
+
 		// for de tipo simple
 		for (i=0;i<3;i++){
 			System.out.println(i);
