@@ -20,6 +20,8 @@ public class Estatica {
 		e.modifica_version(1);
 		e.modifica_version(1);
 		System.out.println(e.version);
+
+
 	}
 
 }

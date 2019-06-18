@@ -211,6 +211,14 @@ public class Colecciones {
 		listadoclientes.add(pepe);
 		Cliente clientePepe=listadoDeListados.get(0).get(0);
 		*/
+
+		// Java 9
+		// Creacíón de colecciones más sencilla
+		List<String> list = List.of("a", "b", "c");
+
+		Set<String> set1 = Set.of("a", "b", "c");
+
+		Map<String, Integer> map = Map.of("a", 1);
 }
 
 }

@@ -1,5 +1,7 @@
 package com.ejemplos.datos;
 
+import java.util.Optional;
+
 public class Variables {
 
 	/**
@@ -23,6 +25,20 @@ public class Variables {
 		System.out.println(d);
 		boolean bool=true;
 		System.out.println(bool);
+
+		// Java 8
+		// tipo Opcional
+		Optional<Integer> enteroOpcional = Optional.of(12);
+		System.out.println(enteroOpcional.get());
+		enteroOpcional = Optional.empty();
+		// Si voy a por el get saltaría una excepción
+		enteroOpcional.ifPresent(System.out::println);
+
+		// nuevo en Java 9
+		// variables con tipo inferido
+		var variableConTipo = "Variable sin Tipo Explicito";
+		System.out.println(variableConTipo);
+
 	}
 
 }
