@@ -1,6 +1,7 @@
 package com.ejemplos.datos.complejos;
 
 import java.util.*;
+import java.util.stream.Stream;
 
 public class Colecciones {
 
@@ -213,12 +214,17 @@ public class Colecciones {
 		*/
 
 		// Java 9
-		// Creacíón de colecciones más sencilla
-		List<String> list = List.of("a", "b", "c");
+		// Creación de colecciones más sencilla
+		List<Integer> list = List.of(1, 2, 3);
+		Set<String> set4 = Set.of("a", "b", "c");
+		Stream<String> stream = Stream.of("a", "b", "c");
+		Map<String, String> map = Map.of("clave 1", "valor 1", "clave 2",  "valor 2");
 
-		Set<String> set1 = Set.of("a", "b", "c");
+		List<Integer> listCopyOf = List.copyOf(list);
+		Set<String> setCopyOf = Set.copyOf(set4);
+		Map<String, String> mapCopyOf = Map.copyOf(map);
 
-		Map<String, Integer> map = Map.of("a", 1);
+
 }
 
 }
