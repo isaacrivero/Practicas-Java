@@ -53,7 +53,7 @@ public class EstructurasDeControl {
 		}
 		i=1;
 		j=1;
-		//operadores lógicos
+		//operadores lï¿½gicos
 		if(i==j && c1.equals(c2)){
 			System.out.println("Se cumplen las dos condiciones");
 		}else{
@@ -88,8 +88,49 @@ public class EstructurasDeControl {
 						"No coincide con los cases");
 				break;
 		}
+
+		// Java 7
+		String cadena= "Valor";
+		switch(cadena){
+			case "Valor2":
+			case "Valor":
+				System.out.println("vale 'Valor'");
+				break;
+			case "Sin Valor":
+				System.out.println("Sin Valor");
+				break;
+			default:
+				System.out.println("entra en default " +
+						"No coincide con los cases");
+				break;
+		}
+		/* Java 12
+		switch (cadena){
+			case "Valor2","Valor" -> {System.out.println("vale 'Valor'");}
+			case "Sin Valor" -> {System.out.println("Sin Valor");}
+			default-> {System.out.println("Otro Valor");}
+		}
+
+		 */
+		// for de tipo simple
+		for (i=0;i<3;i++){
+			System.out.println(i);
+		}
+		// while
+		i=0;
+		while (i<3){
+			System.out.println(i);
+			i++;
+		}
+		// do while
+		i=0;
+		do{
+			System.out.println(i);
+			i++;
+		}while (i<3);
+
 		System.out.println("Entrada al bucle for");
-		for(i=0,j=0;i<10&&j<8;i++,j--){
+		for(i=0,j=0;i<10 && j<8;i++,j--){
 			System.out.println(i);
 			System.out.println(j);
 		}
@@ -112,13 +153,13 @@ public class EstructurasDeControl {
 			dos: for(j=0;j<10;j++ )
 			{
 	           if(i==0){
-				continue dos;           // seguiría en el bucle interno
+				continue dos;           // seguirÃ­a en el bucle interno
 	           }
 	           if(i==1){
-	        	   continue uno;       // seguiría en el bucle principal
+	        	   continue uno;       // seguirÃ­a en el bucle principal
 	           }
 	           else{
-	        	   break uno;          // se saldría del bucle principal
+	        	   break uno;          // se saldrÃ­a del bucle principal
 	           }
 			}
        }

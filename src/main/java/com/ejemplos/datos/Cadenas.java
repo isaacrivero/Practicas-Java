@@ -1,5 +1,7 @@
 package com.ejemplos.datos;
 
+import java.io.UnsupportedEncodingException;
+
 public class Cadenas {
 
 	/**
@@ -7,6 +9,40 @@ public class Cadenas {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		String texto1 = "¡Prueba de texto!";
+		texto1 = new String ("¡Prueba de texto!");
+		System.out.println(texto1);
+		System.out.println("Hola Mundo!".length());
+		String texto2; // = null;
+		texto2=texto1;
+		if(texto1== texto2){
+			System.out.println("Ambas referencias son iguales");
+		}
+		if (texto1.equals(texto2)){
+			System.out.println("Ambos textos son iguales");
+		}
+		System.out.println(texto2);
+		texto2 ="Este es un texto que ocupa " +
+ 				"varias líneas, no obstante se puede "+
+ 				"perfectamente encadenar";
+		System.out.println(texto2);
+		if(texto1!= texto2){
+			System.out.println("Ambas referencias NO son iguales");
+		}
+		if (!texto1.equals(texto2)){
+			System.out.println("Ambos textos NO son iguales");
+		}
+		texto2 += 12;
+		System.out.println(texto2);
+		char[] palabra = {'P','a','l','b','r','a'};//Array de char
+		String cadena = new String(palabra);
+		byte[] datos = {97,98,99};
+		try {
+			String codificada = new String (datos, "8859_1");
+		} catch (UnsupportedEncodingException e) {
+			e.printStackTrace();
+		}
+
 		String s="Hola Mundo";
 		System.out.println(s);
 		System.out.println(s.length());

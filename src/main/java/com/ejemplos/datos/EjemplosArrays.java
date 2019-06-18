@@ -1,9 +1,11 @@
 package com.ejemplos.datos;
 
-public class Arrays {
+import java.util.Arrays;
+
+public class EjemplosArrays {
 
 	/**
-	 * @param args
+	 * @param
 	 */
 	public int sumaarray(int a[]){
 		int i;
@@ -43,7 +45,7 @@ public class Arrays {
 		for (i=0;i<4;i++){
 			System.out.println(nums[i]);
 		}
-		Arrays obja=new Arrays();
+		EjemplosArrays obja=new EjemplosArrays();
 		i=obja.sumaarray(nums);
 		System.out.println(i);
 		int [][] doblearray= new int [2][3];
@@ -77,6 +79,23 @@ public class Arrays {
 				System.out.println(celda);
 			}
 		}
+
+		int x[]={4,5,2,3,7,8,2,3,9,5};
+		Arrays.sort(x);//Estará ordenado
+		Arrays.sort(x,2,5);//Ordena del 2º al 4º elemento
+		System.out.println(x);
+
+		int valores[]=new int[23];
+		Arrays.fill(valores,-1);//Todo el array vale -1
+		Arrays.fill(valores,5,8,-1);//Del elemento 5 al 7 valdrán
+
+		int uno[]={1,1,2};
+		int dos[]=new int [10];
+		Arrays.fill(dos,0);
+		System.arraycopy(uno, 0, dos, 0, uno.length);
+		for (i=0;i<10;i++){
+			System.out.print(dos[i]+" ");
+		} //Sale 1120000000
 	}
 
 }
