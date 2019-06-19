@@ -12,5 +12,17 @@ public class AppUsaMiClase {
         miObjeto.setNombre("Carl Marx");
         System.out.println(miObjeto.getNombre());
 
+        MiClase otroObjeto= new MiClase();
+        otroObjeto.setNombre("Unamuno");
+        otroObjeto.numAlumnos = 4;
+
+        MiClase otroOtroObjeto = new MiClase();
+        System.out.println("Valor de Objeto: "+ otroOtroObjeto.numAlumnos);
+
+        otroObjeto = new MiClase(2);
+        otroObjeto = new MiClase(2,"Machado");
+        System.out.println(otroObjeto);
+        otroOtroObjeto = new MiClase(6, "Gloria Fuertes");
+        System.out.println(otroOtroObjeto);
     }
 }
