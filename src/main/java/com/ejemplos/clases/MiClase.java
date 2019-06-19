@@ -48,5 +48,6 @@ public class MiClase{
         // Deprecado en JAVA 9
         // hay que usar por ejemplo Phantom References
         // https://docs.oracle.com/javase/9/docs/api/java/lang/ref/PhantomReference.html
+        // ó https://www.baeldung.com/java-finalize usando los AutoCloseable
     }
 }
