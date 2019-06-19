@@ -1,4 +1,4 @@
-package com.ejemplos.clases.herencia.programa;
+package com.ejemplos.clases.herencia;
 
 import com.ejemplos.clases.herencia.Animal;
 

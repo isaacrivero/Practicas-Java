@@ -4,12 +4,12 @@ public class MiClase{
     public Integer numAlumnos;
     private String nombre;
 
-    MiClase(){
+    public MiClase(){
         this.numAlumnos = 0;
         this.nombre = "";
     }
 
-    MiClase(Integer numAlumnos){
+    public MiClase(Integer numAlumnos){
         this.numAlumnos = numAlumnos;
         this.nombre = "";
     }

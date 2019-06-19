@@ -1,7 +1,5 @@
 package com.ejemplos.clases.herencia;
 
-import com.ejemplos.clases.herencia.programa.Perro;
-
 /**
  * Created by pepesan on 28/04/2016.
  */

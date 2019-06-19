@@ -1,7 +1,7 @@
 package com.ejemplos.awt;
 
 /*
- * Clase de partida para práctica de AWT
+ * SuperClase de partida para prï¿½ctica de AWT
  * Contenedor base un java.awt.Frame
  */
 
