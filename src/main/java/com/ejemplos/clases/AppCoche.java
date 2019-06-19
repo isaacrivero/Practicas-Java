@@ -1,0 +1,13 @@
+package com.ejemplos.clases;
+
+
+public class AppCoche {
+    public static void main(String[] args) {
+        Coche auris = new Coche();
+        System.out.println(auris);
+        auris.setMatricula("SA1234M");
+        System.out.println(auris.getMatricula());
+        auris.setNumRuedas(5);
+        System.out.println(auris.getNumRuedas());
+    }
+}
